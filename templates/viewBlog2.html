@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %}viewBlogs2{% endblock title%}
+
+{% block body %}
+<div style="padding-top: 30px;">
+<div class="card mb-3">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{viewBlog2.title}}</h5>
+      <h6 class="text-warning">author:{{viewBlog2.author}} </h6>
+      <p class="card-text">{{viewBlog2.content|safe}}</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      <a href="{% url 'blogs' %}" class="btn btn-primary btn-sm">moreblogs</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

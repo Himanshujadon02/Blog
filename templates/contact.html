@@ -1,0 +1,63 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %}contact{% endblock title%}
+
+{% block body %}
+<section>
+<div style="background-image: url('https://images.pexels.com/photos/163007/phone-old-year-built-1955-bakelite-163007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-repeat: no-repeat; background-size: cover;">
+<div class="container-fluid my-4" style="padding-top: 50px;" >
+    <h1 class="text-center py-3" style="color: black;">Get In Touch</h1>
+    <div class="row">
+        <div class="col-6">
+            <form  method="post" style="color: rgb(8, 4, 4);">
+            {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleFormControlInput3" class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name" name="fullname" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput3" class="form-label">phone</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1"
+                        placeholder="mobile name" name="phone"required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput3" class="form-label">address</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                        placeholder="address" name="address"required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput3" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com" name="email"required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea4" class="form-label">message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="message"></textarea >
+                </div>
+                <button type="submit" class="btn btn-primary">submit</button>
+                <button type="reset" class=" btn btn-danger">reset</button>
+            </form>
+        </div>
+        <div class="col-6">
+
+            <div style="padding:50px 100px;">
+                <iframe width="500" height="400" frameborder="0"
+                    src="https://www.bing.com/maps/embed?h=400&w=500&cp=28.462051326298756~77.4906599521637&lvl=17&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
+                    scrolling="no">
+                </iframe>
+                <div style="white-space: nowrap; text-align: center; width: 500px; padding:6px 0;">
+                    <a id="largeMapLink" target="_blank"
+                        href="https://www.bing.com/maps?cp=28.462051326298756~77.4906599521637&amp;sty=r&amp;lvl=17&amp;FORM=MBEDLD">View
+                        Larger Map</a> &nbsp; | &nbsp;
+                    <a id="dirMapLink" target="_blank"
+                        href="https://www.bing.com/maps/directions?cp=28.462051326298756~77.4906599521637&amp;sty=r&amp;lvl=17&amp;rtp=~pos.28.462051326298756_77.4906599521637____&amp;FORM=MBEDLD">Get
+                        Directions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+{% endblock %}
